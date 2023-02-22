@@ -15,6 +15,13 @@ button{
   border: none;
   outline: none;
   border-radius: 4px;
+  width: min-content;
+  cursor: pointer;
+  white-space: nowrap;
+}
+button:hover{
+  background: #04383f;
+  color: #fcfffe;
 }
 body {
   color: #04383f;

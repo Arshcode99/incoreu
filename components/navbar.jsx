@@ -29,10 +29,11 @@ const Navbar = () => {
   return (
     <>
      <header className={styles.header}>
-        <div className={styles.logo}>Incoreu.</div>
+      <Link href='/'>
+        <div className={styles.logo}>Incoreu.</div></Link>
         <div className={styles.links}>
-            <Link href='/' className={styles.a}>Browse</Link>
-            <Link href='/' className={styles.a}>Write</Link>
+            <Link href='/browse' className={styles.a}>Browse</Link>
+            <Link href='/write' className={styles.a}>Write</Link>
             <div className={styles.icon} title="Change Mode's">
               <CiDark onClick={ChangeMode} id='dark'/>
             <CiLight onClick={ChangeModeAgain} className={styles.light} id='light'/>
