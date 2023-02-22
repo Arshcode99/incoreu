@@ -19,6 +19,7 @@ button{
 body {
   color: #04383f;
   background: #fcfffe;
+  transition: all 0.4s;
 }
 
 a {

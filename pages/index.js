@@ -1,27 +1,28 @@
 import styles from '@/styles/Home.module.css';
-import Hero from '../public/graphics3.png';
-import HerokeSathi from '../public/Incoreu.png';
-import Pointer from '../public/pointer.svg';
+import Hero from '../public/graphics4.png';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
   return (
     <>
-     <section className={styles.section}>
-      <div className={styles.twocol}>
-      <div className={styles.left}>
-        <div className={styles.been}>Welcome To Incoreu, Where Students Can Really Enjoy!</div>
-        <hr />
-        <h1 className={styles.h1}>Real Students Voices,<br /> Honest Reviews of Schools & Collages.</h1>
-        <p className={styles.p}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores deserunt excepturi, quos officiis officia unde magnam, laborum aut quam suscipit nam, exercitationem necessitatibus. Ullam inventore culpa exercitationem repellendus nobis soluta?</p>
-        <Link href='/' className={styles.btn}>Get Started</Link>
+      <div className={styles.container}>
+        <div className={styles.herosection}>
+          <div className={styles.lefthero}>
+            <span className={styles.smalldata}>The Freedom Is Here For Students!</span>
+            <h1>
+              Let The World Know <h1 className={styles.h1hero}>Your Voice Students.</h1>
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quia sunt temporibus obcaecati velit modi numquam quasi dolores, harum quod excepturi nemo ullam ipsum cupiditate facere culpa dicta consequatur est.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem soluta ratione eum deserunt at blanditiis perspiciatis dolorem vel quisquam id numquam eligendi perferendis aspernatur quibusdam, voluptates unde commodi culpa eaque.
+            </p>
+            <Link href='/' className={styles.btn}>Get Started</Link>
+          </div>
+          <div className={styles.righthero}>
+            <Image src={Hero} alt="styles.Sorry, Image Cant Load Cuz Your Internet Connection Is Died... :)" />
+          </div>
+        </div>
       </div>
-      <div className={styles.right}>
-        <Image src={Hero} alt="Internet Slow! :(" className={styles. hero}/>
-      </div>
-      </div>
-     </section>
     </>
   )
 }

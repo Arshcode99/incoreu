@@ -1,93 +1,86 @@
-.section{
-  width: 100%;
-  height: 93vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container {
+  display: grid;
+  width: 97%;
+  height: 87vh;
+  background: transparent;
+  backdrop-filter: blur(90px);
+  border-radius: 4px;
+  margin: 10px auto;
+  overflow-y: scroll;
 }
-.twocol{
+.container::-webkit-scrollbar {
+  width: 0px;
+}
+.herosection {
+  width: 80%;
+  max-width: 80%;
+  margin: 0 auto;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+.lefthero {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
   gap: 10px;
-  width: 85%;
-  max-width: 1200px;
-  padding: 10px;
 }
-.been{
-  width: min-content;
+.smalldata {
   padding: 10px;
-  color: #169d53;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
   white-space: nowrap;
+  width: min-content;
 }
-.h1{
-  padding: 10px;
+.h1hero {
   font-size: 3rem;
   font-weight: 800;
-}
-.p{
-  padding: 10px;
-  margin-bottom: 10px;
+  background: linear-gradient(50deg, #169d53, gold);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 .btn{
-  display: flex;
-  align-items: center;
-  width: min-content;
-  background: #169d53;
-  color: #fcfffe;
-  padding: 10px 20px;
-  white-space: nowrap;
-  border-radius: 4px;
-  margin: 10px;
+    padding: 10px 20px;
+    background: #169d53;
+    color: aliceblue;
+    width: min-content;
+    white-space: nowrap;
+    border-radius: 2px;
 }
 .btn:hover{
-  background: rgba(225,225,225,0.1);
+  background: rgba(225,225,225,0.2);
   color: #169d53;
 }
-.right{
-  display: flex;
-  justify-content: center;
+.righthero img{
+  width: 100%;
+  height: 100%;
+  animation: HeroAni 3s ease-in-out infinite;
 }
-.left hr{
-  height: 4px;
-  background: linear-gradient(90deg, #169d53, navy);
-  border: none;
-  border-radius: 34px;
-  width: 30%;
-  margin-left: 10px;
-  animation: hrAni 10s ease-in-out infinite;
-}
-@keyframes hrAni{
+@keyframes HeroAni{
   50%{
-    background-position: -100%;
-    width: 60%;
+    transform: translateY(-20px);
+    filter: blur(2px);
   }
 }
-.hero{
-  height: auto;
-  width: 80%;
+.btnholder{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
 }
-
-@media only screen and (max-width: 1245px) {
-  .twocol{
+@media only screen and (max-width: 768px) {
+  /* Hero Section:  */
+  .herosection{
     grid-template-columns: 1fr;
-    max-width: none;
-    width: 95%;
-  }
-  .twocol, .h1, .p, .been{
+    width: 100%;
+    max-width: 100%;
     padding: 0px;
   }
-  .h1{
-    font-size: 2.7rem;
-  }
-  .been{
-    white-space: normal;
-    width: 100%;
-  }
-  .btn{
-    margin: 0;
-  }
-  .left hr{
-    margin-left: 0px;
-    margin-top: 10px;
+  .righthero img{
+    animation: none;
   }
 }
